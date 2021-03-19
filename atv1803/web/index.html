@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Atividade PW</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            body{
+                background-color: aqua;
+                font-family: sans-serif;
+                color: royalblue;
+                text-align: center; 
+            }
+            h1{
+                font-family: sans-serif;
+                color: royalblue;
+            }
+        </style>
+        
+        <h1 align="center">Central do Funcionário</h1>
+        <br>
+        <form name="Form" action="Recebedados" method="post">
+            Digite seu nome:
+            <input type="text" name="name">
+            <p>
+            <br>
+            Escolha seu cargo:
+            <select id="seviço">
+                <option selected disabled value="">Selecione seu cargo</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <p>
+            <br>
+            Digite seu salário:
+            <input type="text" name="coin">
+            <br>
+            <br>
+            <br>
+            <input type="submit" name="Enviar" value="Enviar">
+        </form>
+    </body>
+</html>
