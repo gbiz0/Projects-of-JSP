@@ -33,7 +33,25 @@ public class Recebedados extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-          
+            
+            String name = request.getParameter("name");
+            String job = request.getParameter("job");
+            Double coin = Double.parseDouble(request.getParameter("coin"));
+            
+            double newcoin;
+            
+            if(job.equals("optionone")){
+                newcoin = coin + (coin/100)*10;
+            }
+            else if(job.equals("optiontwo")){
+                newcoin = coin + (coin/100)*15;
+            }
+            else{
+                newcoin = coin + (coin/100)*25;
+            }    
+            request.setAttribute("name", name);    
+            request.setAttribute("newcoin", newcoin);                    
+            request.getRequestDispatcher("resposta.jsp").forward(request, response);
         }
     }
 

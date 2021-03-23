@@ -1,8 +1,9 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Atividade PW</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
         <style>
@@ -26,11 +27,11 @@
             <p>
             <br>
             Escolha seu cargo:
-            <select id="seviço">
+            <select id="job">
                 <option selected disabled value="">Selecione seu cargo</option>
-                <option>A</option>
-                <option>B</option>
-                <option>C</option>
+                <option value="opitionone">A</option>
+                <option value="optiontwo">B</option>
+                <option value="optionthree">C</option>
             </select>
             <p>
             <br>
