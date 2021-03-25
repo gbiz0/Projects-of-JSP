@@ -1,13 +1,12 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Resultado</title>
+        <title>Pagamento</title>
     </head>
     <body>
-        <style>
+                <style>
             body{
                 background-color: aqua;
                 font-family: sans-serif;
@@ -21,8 +20,6 @@
             }
         </style>
 
-        
-        <h1>Boas vindas, ${name}, seu peso ideal (Em kg), é: ${result}</h1>
-        
+        <h1>Opa senhor(a) ${name}, o seu valor a pagar é: R$${value}</h1>
     </body>
 </html>

@@ -35,8 +35,8 @@
             </select>
             <p>
             <br>
-            Digite sua altura (Em cm):
-            <input type="number" name="h">
+            Digite sua altura:
+            <input type="text" name="h">
             <br>
             <br>
             <br>
