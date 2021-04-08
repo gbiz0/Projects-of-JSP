@@ -33,54 +33,36 @@ public class Recebedados extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+    
+            Integer one =  Integer.parseInt(request.getParameter("one"));
+            Integer two =  Integer.parseInt(request.getParameter("two"));
+            Integer three =  Integer.parseInt(request.getParameter("three"));
             
-            String name = request.getParameter("name");
-            String type = request.getParameter("type");
-            double liter = Double.parseDouble(request.getParameter("liter"));
-
-            double value = 0;  
-            double result;
             
-            switch(type){
-                case "gasoline": 
-                            if(liter > 20){
-                                result = (5.59*liter);
-                                
-                                value = (result-(result*0.06)); 
-                            }
-                            
-                            else { 
-                                result = (5.59*liter);
-                                
-                                value = (result-(result*0.04)); 
-                               
-                             }
-                break;
-                
-                case "alcohol": 
-                    if(liter > 20){
-                                result = (3.69*liter);
-                                
-                                value = (result-(result*0.05)); 
-                            }
-                            
-                            else {
-                                result = (3.69*liter);
-                                
-                                value = (result-(result*0.03)); 
-                               
-                            }
+            String result;
+            
+            if(one == two || two == three || three == one){
+                if(one == two && two == three){
+                  result = "Triangulo equilátero";
+                }
+                else{
+                    result = "Triangulo isóscele";
             }
-            
-            request.setAttribute("name", name);    
-            request.setAttribute("value", value);                    
-            request.getRequestDispatcher("resposta.jsp").forward(request, response);
-    
-    
+                
+            }
+            else if (one != two && two != three && three != one){
+                   result = "Triangulo escaleno";
+        }
+            else{
+                    result = "Isso não forma um triangulo";
+            }
+         request.setAttribute("result", result);                    
+         request.getRequestDispatcher("resposta.jsp").forward(request, response);
+         
         
         }
     }
-
+         
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -121,3 +103,6 @@ public class Recebedados extends HttpServlet {
     }// </editor-fold>
 
 }
+    
+
+    
